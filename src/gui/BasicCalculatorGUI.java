@@ -7,49 +7,61 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
+import java.util.Objects;
 
 public class BasicCalculatorGUI extends JFrame {
     private JTextField inputField;
     private JLabel resultLabel;
 
     public BasicCalculatorGUI() {
-        setTitle("Basic Calculator");
-        setSize(500, 700);
+        setTitle("Calculator");
+        setSize(400, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new BorderLayout(10, 10));
+        setResizable(false);
+
+        URL iconUrl = getClass().getResource("/assets/delete.png");
+        ImageIcon icon = new ImageIcon(iconUrl);
+        setIconImage(icon.getImage());
 
         JPanel outerPanel = new JPanel();
         outerPanel.setLayout(new BorderLayout(10, 10));
         outerPanel.setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20)); // Adding whitespace between frame and window
-        outerPanel.setBackground(new Color(230, 230, 250));
+        outerPanel.setBackground(new Color(30, 30, 30));
 
         JPanel innerPanel = new JPanel();
         innerPanel.setLayout(new BorderLayout(10, 10));
-        innerPanel.setBorder(BorderFactory.createLineBorder(Color.GRAY, 2)); // Frame around the calculator components
-        innerPanel.setBackground(new Color(255, 255, 255));
+        innerPanel.setBackground(new Color(50, 50, 50));
 
-        inputField = new JTextField();
-        inputField.setFont(new Font("Arial", Font.PLAIN, 24));
+        inputField = new JTextField(12);
+        inputField.setFont(new Font("Arial", Font.PLAIN, 18));
         inputField.setHorizontalAlignment(JTextField.RIGHT);
         inputField.setEditable(false);
-        inputField.setBackground(Color.WHITE);
+        inputField.setBackground(new Color(30, 30, 30));
+        inputField.setForeground(new Color(191, 191, 185));
         inputField.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
-        resultLabel = new JLabel("Result: ");
-        resultLabel.setFont(new Font("Arial", Font.PLAIN, 18));
+        resultLabel = new JLabel("0 ");
+        resultLabel.setFont(new Font("Arial", Font.BOLD, 32));
         resultLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        resultLabel.setForeground(Color.WHITE);
         resultLabel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         JPanel displayPanel = new JPanel();
         displayPanel.setLayout(new BorderLayout());
         displayPanel.add(inputField, BorderLayout.NORTH);
         displayPanel.add(resultLabel, BorderLayout.CENTER);
+        displayPanel.setBackground(new Color(30,30, 30));
 
-        add(displayPanel, BorderLayout.NORTH);
+        innerPanel.add(displayPanel, BorderLayout.NORTH);
 
         JPanel buttonPanel = createButtonPanel();
-        add(buttonPanel, BorderLayout.CENTER);
+        innerPanel.add(buttonPanel, BorderLayout.CENTER);
+
+        outerPanel.add(innerPanel, BorderLayout.CENTER);
+        add(outerPanel, BorderLayout.CENTER);
     }
 
     private void addKeyBindings(JButton button, String key) {
@@ -68,6 +80,7 @@ public class BasicCalculatorGUI extends JFrame {
     private JPanel createButtonPanel() {
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(5, 4, 10, 10));
+        panel.setBackground(new Color(30, 30, 30));
 
         String[] buttons = {
                 "7", "8", "9", "/",
@@ -80,9 +93,9 @@ public class BasicCalculatorGUI extends JFrame {
         for (String text : buttons) {
             RoundedButton button = new RoundedButton(text);
             button.setFont(new Font("Arial", Font.PLAIN, 24));
-            button.setFocusPainted(false);
-            button.setBackground(new Color(173, 216, 230));
-            button.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+            button.setBackground(new Color(40, 40, 40));
+            button.setForeground(new Color(255,250,240));
+            button.setBorder(BorderFactory.createEmptyBorder());
             button.addActionListener(new ButtonClickListener());
             panel.add(button);
 
@@ -90,7 +103,7 @@ public class BasicCalculatorGUI extends JFrame {
             addKeyBindings(button, text);
         }
 
-        // add keybindings expects JButtons so we need to cast component to JButton
+        // add keybindings expects JButtons ,so we need to cast component to JButton
         // Custom key bindings for operations
         addKeyBindings((JButton) panel.getComponent(3), "DIVIDE");
         addKeyBindings((JButton) panel.getComponent(7), "MULTIPLY");
@@ -111,14 +124,14 @@ public class BasicCalculatorGUI extends JFrame {
                 case "=":
                     try {
                         int result = CalculatorEvaluator.evaluateExpression(inputField.getText());
-                        resultLabel.setText("Result: " + result);
+                        resultLabel.setText("" + result);
                     } catch (Exception ex) {
                         resultLabel.setText("Error: Invalid expression");
                     }
                     break;
                 case "C":
                     inputField.setText("");
-                    resultLabel.setText("Result: ");
+                    resultLabel.setText("0  ");
                     break;
                 case "CE":
                     if (!inputField.getText().isEmpty()) {
