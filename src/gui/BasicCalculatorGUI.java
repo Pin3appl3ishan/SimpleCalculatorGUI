@@ -13,14 +13,17 @@ public class BasicCalculatorGUI extends JFrame {
 
     public BasicCalculatorGUI() {
         setTitle("Basic Calculator");
-        setSize(400, 200);
+        setSize(400, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setLayout(new GridBagLayout());
 
         inputField = new JTextField(20);
+        inputField.setFont(new Font("Arial", Font.PLAIN, 24));
         JButton calculateButton = new JButton("Calculate");
         resultLabel = new JLabel("Result: ");
+        inputField.setFont(new Font("Arial", Font.PLAIN, 24));
+
 
         calculateButton.addActionListener(new ActionListener() {
             @Override
