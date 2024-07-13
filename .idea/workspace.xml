@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5180417-44c8-41c1-8b65-06ca184747cf" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/BasicCalculatorGUI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/evaluator/CalculatorEvaluator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/BasicCalculatorGUI.java" afterDir="false" />
+    <list default="true" id="e5180417-44c8-41c1-8b65-06ca184747cf" name="Changes" comment="single entry point for app">
+      <change afterPath="$PROJECT_DIR$/src/gui/component/RoundedButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/BasicCalculatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BasicCalculatorGUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,11 +22,16 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="v1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2jBHgSNJ1NO2dT78OlygsNHfCf8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -68,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720853664103</updated>
-      <workItem from="1720853665565" duration="955000" />
+      <workItem from="1720853665565" duration="2750000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -78,14 +81,52 @@
       <option name="project" value="LOCAL" />
       <updated>1720854301351</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="gui">
+      <option name="closed" value="true" />
+      <created>1720855245837</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720855245837</updated>
+    </task>
+    <task id="LOCAL-00003" summary="operation logic">
+      <option name="closed" value="true" />
+      <created>1720855292196</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1720855292196</updated>
+    </task>
+    <task id="LOCAL-00004" summary="single entry point for app">
+      <option name="closed" value="true" />
+      <created>1720855316751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720855316751</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="gui" />
+    <MESSAGE value="operation logic" />
+    <MESSAGE value="single entry point for app" />
+    <option name="LAST_COMMIT_MESSAGE" value="single entry point for app" />
   </component>
 </project>
