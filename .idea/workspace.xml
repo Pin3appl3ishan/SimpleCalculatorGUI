@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5180417-44c8-41c1-8b65-06ca184747cf" name="Changes" comment="single entry point for app">
-      <change afterPath="$PROJECT_DIR$/src/gui/component/RoundedButton.java" afterDir="false" />
+    <list default="true" id="e5180417-44c8-41c1-8b65-06ca184747cf" name="Changes" comment="misc">
+      <change afterPath="$PROJECT_DIR$/src/assets/delete.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/BasicCalculatorGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/BasicCalculatorGUI.java" afterDir="false" />
     </list>
@@ -55,6 +55,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\.vscode\java\BasicCalculatorGUI\src\assets" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -105,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720855316751</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added button">
+      <option name="closed" value="true" />
+      <created>1720859106576</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720859106576</updated>
+    </task>
+    <task id="LOCAL-00006" summary="misc">
+      <option name="closed" value="true" />
+      <created>1720859127714</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720859127714</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +148,8 @@
     <MESSAGE value="gui" />
     <MESSAGE value="operation logic" />
     <MESSAGE value="single entry point for app" />
-    <option name="LAST_COMMIT_MESSAGE" value="single entry point for app" />
+    <MESSAGE value="added button" />
+    <MESSAGE value="misc" />
+    <option name="LAST_COMMIT_MESSAGE" value="misc" />
   </component>
 </project>
